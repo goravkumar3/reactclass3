@@ -1,22 +1,16 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
-
-function App() {
+import Navbar from './component/navbar';
+const App=()=> {
+  const [modes,setMode]=useState(false)
+  let changeMode=()=>{
+    setMode((modes)=>!modes)
+  }
   return (
-    <div className="App">
+    <div className={modes?"app":"App"}>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+       <Navbar mode={modes} modefunc={changeMode}/>
+       <h1>Hello welcome</h1>
       </header>
     </div>
   );

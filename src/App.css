@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+.App{
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #fff;
+  height: 100vh;
 }
-
-.App-link {
-  color: #61dafb;
+.app{
+  background-color: #fff;
+  font-size: calc(10px + 2vmin);
+  color: #282c34;
+  height: 100vh;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0px;
+  color: #fff;
+}
+.navdark{
+  background-color: blueviolet;
+}
+.navlight{
+  background-color: #282c34;
+}
+.menu ul{
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 20px;
+}
+.menuicon{
+  display: none;
+}
+.icon{
+  /* filter: invert(); */
+  color: #fff;
+}
+nav button{
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+}
+.modeicon{
+  width: 30px;
+  height: 30px;
+}
+@media only screen and (max-width:700px) {
+  nav{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  .menu ul{
+    flex-direction: column;
+  }
+  .menuactive{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .menuactive ul{
+    list-style: none;
+  }
+  .menu{
+    display: none;
+  }
+  .navbar{
+    padding: 0;
+    flex-direction: column;
+  }
+  .menuicon{
+    display: block;
   }
 }
